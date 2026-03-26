@@ -32,7 +32,7 @@ resource "aws_security_group" "ec2-sg" {
 #Adding the rules seperately for EC2 security group--------------------------------
 
 resource "aws_security_group_rule" "ec2_http_from_alb" {
-    type = ingress
+    type = "ingress"
     from_port = 80
     to_port = 80
     protocol = "tcp"
