@@ -1,6 +1,6 @@
 variable "vpc_id" {
-    description = "VPC ID"
-    type = string
+  description = "VPC ID for security groups"
+  type        = string
 }
 
 variable "allowed_ssh_ip" {

@@ -1,31 +1,26 @@
 variable "vpc_id" {
-    description = "VPC ID where subnets will be created"
-    type = string
-  
+  description = "VPC ID"
+  type        = string
 }
 
 variable "public_subnets" {
-    description = "Map of public subnet CIDRs"
-    type = map(string)
-  
+  description = "Public subnet CIDRs"
+  type        = map(string)
 }
 
 variable "private_subnets" {
-    description = "Map of private subnet CIDRs"
-    type = map(string)
-  
+  description = "Private subnet CIDRs"
+  type        = map(string)
 }
 
 variable "availability_zones" {
-    description = "AZ Mapping"
-    type = map(string)
-  
+  description = "AZ mapping"
+  type        = map(string)
 }
 
 variable "public_route_table_id" {
-    description = "Public route table id from vpc module"
-    type = string
-  
+  description = "Public route table ID"
+  type        = string
 }
 
 variable "create_nat_gateway" {
