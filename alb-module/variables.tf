@@ -4,7 +4,7 @@ variable "subnet_ids" {
 }
 
 variable "security_group_id" {
-  description = "ALB Security Group"
+  description = "ALB security group"
   type        = string
 }
 
