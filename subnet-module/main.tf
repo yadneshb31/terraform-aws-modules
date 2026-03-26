@@ -63,13 +63,13 @@ resource "aws_route_table" "private_rt" {
 
 resource "aws_route" "private_internet_route" {
   route_table_id = aws_route_table.private_rt.id
-  destination_cidr_block = "0.0.0.0/0 "
+  destination_cidr_block = "0.0.0.0/0"
   nat_gateway_id = aws_nat_gateway.nat[0].id #"Give me the FIRST (and only) NAT Gateway"
   depends_on = [ aws_nat_gateway.nat ]
 }
 
 resource "aws_route_table_association" "private_assoc" {
-  for_each = var.aws_subnet.private
+  for_each = aws_subnet.private
   subnet_id = each.value.id
   route_table_id = aws_route_table.private_rt.id
   
