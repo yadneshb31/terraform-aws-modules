@@ -34,11 +34,6 @@ resource "aws_autoscaling_group" "asg" {
   target_group_arns = [var.target_group_arn]
 
   health_check_type = "EC2"
-}
-
-  target_group_arns = [var.target_group_arn]
-
-  health_check_type = "EC2"
 
   tag {
     key                 = "Name"
